@@ -210,6 +210,42 @@ namespace ATP_lista
             }
 
             return pom;
+            //ovo je nasa deveta. jer ne moze ovo lista.count to znaci da je bitno samo da je na jednoj vrsti Vrste(ako kapiras sto kazem.)pogledaj ovaj kod pa mozda shvatis sto je pisac htio reci hehe
+            public string Deveta()
+        {
+            string povratna = " ";
+            foreach(Teniser teniser in spisakTenisera)
+            {
+                List<string> lista = new List<string>();
+                foreach(RezultatNaTurniru rezultat in teniser.SpisakRezultata)
+                {
+                    lista.Add(rezultat.Turnir.Vrsta.ToString());
+                }
+                foreach (string vrsta in lista)
+                {
+                    if (vrsta.Contains("GrandSLam") && !vrsta.Contains("Masters") && !vrsta.Contains("Drugi"))
+                    {
+                        povratna += teniser.Ime + "GrandSlam" + Environment.NewLine;
+                    }
+                    if (!vrsta.Contains("GrandSLam") && vrsta.Contains("Masters") && !vrsta.Contains("Drugi"))
+                    {
+                        povratna += teniser.Ime + "Masters" + Environment.NewLine;
+                    }
+                    if (!vrsta.Contains("GrandSLam") && !vrsta.Contains("Masters") && vrsta.Contains("Drugi"))
+                    {
+                        povratna += teniser.Ime + "Drugi" + Environment.NewLine;
+                    }
+                    else
+                    {
+                        povratna = " Nijedan teniser nije igrao na samo jednoj vrsti turnira";
+                    }
+
+                }
+
+            }
+            return povratna;
+        }
+
 
         } 
 
