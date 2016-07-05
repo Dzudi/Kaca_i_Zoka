@@ -213,7 +213,7 @@ namespace ATP_lista
 
         } 
 
-        public string desetaMetoda()
+        public string desetaMetoda()// opet si zaboravio uslov da je pobijedio na tom turniru odnosno da je broj bodova = max broj bodova. pozzzz hehehehehe
         {
             string teniser = "";
 
