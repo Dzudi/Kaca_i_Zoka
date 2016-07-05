@@ -118,7 +118,7 @@ namespace Kaca_i_Zoka
            return prosek = zbir / count;
         }
 
-        public double petaMetodaTeniser()
+        public double petaMetodaTeniser()// ovdje se vraca procenat znacajnoh turnira odnosno grandslam i masters a ne onih na kojim je pobijedio!
         {
             int countAll = 0;
             int znacajni = 0;
@@ -154,7 +154,7 @@ namespace Kaca_i_Zoka
 
             foreach (RezultatnaTurniru r in RezultatiNaTurnirima)
             {
-                if (lista.Contains(r.Turnir.Naziv))
+                if (lista.Contains(r.Turnir.Naziv))// treba !, odnosno da ne sadrzi vec taj naziv
                 {
                     lista.Add(r.Turnir.Naziv);
                 }
