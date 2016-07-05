@@ -189,6 +189,29 @@ namespace ATP_lista
         }
 
         //za osmu nemam tekst
+        public string Osma()
+        {
+            string povratna = " ";
+            foreach (Teniser teniser in spisakTenisera)
+            {
+                if (teniser.Rang == 1)
+                {
+                    foreach (RezultatNaTurniru rezultat in teniser.SpisakRezultata)
+                    {
+                        if (rezultat.Turnir.Vrsta.ToString() == "Grandslam" && rezultat.BrojOsvojenihPoena == rezultat.Turnir.MaxBrojBodova)
+                        {
+                            povratna = "jeste";
+                        }
+                        else
+                        {
+                            povratna = "nije";
+                        }
+                    }
+                }
+            }
+            return povratna;
+        }
+
         
         public string devetaMetoda()
         {
