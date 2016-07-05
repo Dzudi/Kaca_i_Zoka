@@ -152,7 +152,7 @@ namespace ATP_lista
             return pom;
         }
 
-        public string sestaMetoda(Turnir.VrstaTurnira vrsta)
+        public string sestaMetoda(Turnir.VrstaTurnira vrsta)// ovdje je samo (VrstaTurnira vrsta), jer tamo u klasi turnir enum treba da ti je iznad klase turnir,znaci ne unutar klase.samo da su u istom namespace
         {
             string pom = "";
 
