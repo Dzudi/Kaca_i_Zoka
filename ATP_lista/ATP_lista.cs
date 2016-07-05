@@ -160,7 +160,7 @@ namespace ATP_lista
             {
                 foreach (RezultatnaTurniru r in t.RezultatiNaTurnirima)
                 {
-                    if (r.BrojOsvojenihBodova.Equals(r.Turnir.MaxBrojPoena))
+                    if (r.BrojOsvojenihBodova.Equals(r.Turnir.MaxBrojPoena))// zaboravip si odje da iskoristis ovo za vrstu,nisi dzabe dobio ulazni parametar samo uporedi vrte. i bolje koristi == umijesto equals znam da to vise preferiraju
                     {
                         pom += t.Ime+ Environment.NewLine;
                     }
