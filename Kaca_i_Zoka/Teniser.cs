@@ -189,6 +189,36 @@ namespace Kaca_i_Zoka
                 return "nije";
             }
         }
+        public string DevetaNasa()
+        {
+            string odg = " ";
+            string zemlja = ime.Split(' ')[2];
+            string prezime = ime.Split(' ')[1];
+            if(zemlja.ToUpper() == "(SRB)")
+            {
+                odg += "jeste, ";
+            }
+            else
+            {
+                odg += "nije, ";
+            }
+
+            string samoglasnici = "AEIOUaeiou";
+            string suglasnici = " ";
+            for (int i = 0; i < prezime.Length; i++)
+            {
+                if (!samoglasnici.Contains(prezime[i]))
+                {
+                    suglasnici += prezime[i];
+                }
+            }
+
+            for (int i = 0; i <3; i++)
+            {
+                odg += suglasnici[i];
+            }
+            return odg;
+        }
 
         //tekst devetog nemamo
         
